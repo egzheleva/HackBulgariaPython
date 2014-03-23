@@ -1,8 +1,3 @@
 def count_consonants(str):
-    consonants = 'bcdfghjklmnpqrstvwxz'
-    count = 0
-    for i in str:
-        if i in consonants:
-            count += 1
-    return count
-
+    return len([character for character in str if
+                character.isalpha() and not character in "aeiouyAEIOUY"])

@@ -1,13 +1,10 @@
 from collections import defaultdict
 
+def groupby(func, seq):
+    grouped_items = defaultdict(list)
 
-def group_by_type(dictionary):
-    grouped_items = defaultdict(dict)
-    keys = dictionary.keys()
-    for key in keys:
-        if not type(key) in grouped_items:
-            grouped_items[type(key)] = {key: dictionary[key]}
-        else:
-            grouped_items[type(key)][key] = dictionary[key]
-    return dict(grouped_items)
+    for item in seq:
+        grouped_items[func(item)].append(item)
+
+    return grouped_items
 

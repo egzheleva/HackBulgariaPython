@@ -16,7 +16,7 @@ class IsIntPalindromeTest(unittest.TestCase):
         self.assertTrue(is_int_palindrome(999))
 
     def testing_is_palindrome_three_digit_int(self):
-        self.assertFalse(is_int_palindrome(123)
+        self.assertFalse(is_int_palindrome(123))
 
 if __name__ == '__main__':
     unittest.main()
